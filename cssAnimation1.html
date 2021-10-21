@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+<style type ="text/css">
+
+#bachrachhead{
+width: 400px;
+height: 400px;
+z-index: -1;
+background-image: url(bachrachhead1.png);
+background-size: contain;
+position: absolute;
+top: 500px;
+left: 5px;
+animation-name: move;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+
+}
+
+#halfbachrach{
+width: 400px;
+height: 400px;
+z-index: 1;
+background-image: url(halfbachrach.png);
+background-size: contain;
+position: absolute;
+top: 500px;
+left: 5px;
+}
+
+
+@keyframes move{
+
+0%{top:515px}
+
+50%{top:100px }
+
+100%{top: 515px}
+
+}
+
+
+</style>
+<div id="halfbachrach"></div>
+<div id="bachrachhead"></div>
+
+
+</body>
+</html>
