@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+
+#background{
+	background-height:  1000px;
+	background-width: 1000px;
+	background-color: black;
+}
+
+</style>
+
+	
+
+	<script type="text/javascript">
+		function makeGhost(){
+
+			var ghost = document.createElement("div");
+			document.body.appendChild(ghost);
+
+			ghost.style.width = "200px";
+			ghost.style.height = "400px";
+			ghost.style.backgroundImage = "url(ghost.png)";
+			ghost.style.backgroundSize = "contain";
+			ghost.style.backgroundColor = "black";
+
+		};
+		console.log();
+		makeGhost();
+
+
+
+
+	</script>
+
+</body>
+<div id="background"></div>
+
+</html>

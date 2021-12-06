@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div id="box"></div>
+
+<script type="text/javascript">
+
+var Characters = ["Fluttershy1", "RainbowDash1", "PinkyPie1", "Rairity1", "TwilightSparkle1", "Applejack1", "Spike1"]
+var Words = ["Fluttershy", "RainbowDash", "PinkyPie", "Rairity", "TwilightSparkle", "Applejack", "Spike"]
+
+var pony = document.createElement('div');
+var text = document.createElement('div');
+
+function MakePony ()
+{
+
+	document.body.appendChild(pony);
+	pony.style.height="500px";
+	pony.style.width="500px";
+	pony.style.backgroundSize="contain";
+	pony.style.backgroundRepeat="no-repeat";
+	pony.style.backgroundImage = "url(MyLittlePonyBackground.png)";
+	pony.style.position = "center";
+}
+
+MakePony();
+
+document.addEventListener("click", function changeImage (){
+		var random = Math.floor(Math.random()*7)
+		pony.style.backgroundImage = "url(" + Characters[random] + ".png)"
+
+function MakeText ()
+{
+	document.body.appendChild(text);
+	text.style.height="500px";
+	text.style.width="500px";
+	text.style.position="absolute";
+	text.style.left="500px"
+}
+
+MakeText();
+document.addEventListener("click", function changeImage (){
+		var random = Math.floor(Math.random()*7)
+		text.style.backgroundImage = "url(" + Words[random] + ".png)"
+
+//let redirect = [`deciding`, 'deciding.', `deciding..`, `deciding...`]
+
+//function redirect()
+
+
+</script>
+</body>
+</html>
+

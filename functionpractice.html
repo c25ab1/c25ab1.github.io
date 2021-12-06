@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		
+		.hearts{}
+	</style>
+</head>
+<body>
+
+	<p> Press a key 1-9!! </p>
+<script type="text/javascript">
+//var number = 10;
+//function addition(input){
+//console.log(number + input)}
+
+//addition(number);
+
+function makeHeart (){
+	var heart = document.createElement('div')
+	document.body.appendChild(heart);
+	heart.style.backgroundImage = "url(heart.png)";
+	heart.style.height="50px";
+	heart.style.width="50px";
+	heart.style.backgroundSize="contain";
+	heart.style.backgroundRepeat="no-repeat";
+	heart.style.backgroundImage = "url(" + event.key + ".png)"
+	// heart.classList.addhearts');
+	// heart.innerText = "hey!";
+	heart.style.display = "inline-block";
+
+}
+document.addEventListener("keypress", function(event) {
+	console.log(event)
+	// var key = e.keyCode();
+	makeHeart();
+
+	if (event.key == "1") {}
+
+	if (event.key == "2") {}
+
+	if (event.key == "3") {}
+
+	if (event.key == "4") {}
+
+	if (event.key == "5") {}
+
+	if (event.key == "6") {}
+
+	if (event.key == "7") {}
+
+	if (event.key == "8") {}
+
+	if (event.key == "9") {}
+
+
+})
+
+	// if (key === 13) {
+// document.addEventListener("keypress" "c", makeHeart); 
+
+	</script>
+</body>
+</html>
