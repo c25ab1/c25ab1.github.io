@@ -23,7 +23,22 @@ shrek.style.backgroundSize = "contain";
 }
 
 	setInterval(MakeShrek, 500);
-makeShrek();
+MakeShrek();
+ var shrek =document.createElement("div")
+var counter = 0;
+document.addEventListener("click", function MakeShrek(){
+	counter = counter +1;
+	console.log(counter)
+
+if (counter%2 == 1) {
+		shrek.style.backgroundImage = "url(shrekface.png)";
+	}
+
+	else if 
+		(counter%2 == 0) {
+		shrek.style.backgroundImage = "url(donkeyface.png)";
+	}
+})
 
 </script>
 

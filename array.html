@@ -3,35 +3,42 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+
+	<style type="text/css">
+		
+		#pony{
+			height: 500px;
+			width: 500px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0px;
+			background-position: center;
+			background-image: url(MyLittlePonyBackground.png);
+		}
+
+	</style>
 </head>
 <body>
-<div id="box"></div>
+
+
+
+
+<div id="pony"></div>
 
 <script type="text/javascript">
 
-var Characters = ["Fluttershy1", "RainbowDash1", "PinkyPie1", "Rairity1", "TwilightSparkle1", "Applejack1", "Spike1"]
-var Words = ["Fluttershy", "RainbowDash", "PinkyPie", "Rairity", "TwilightSparkle", "Applejack", "Spike"]
+var Words = ["Fluttershy1", "RainbowDash1", "PinkyPie1", "Rairity1", "TwilightSparkle1", "Applejack1", "Spike1"];
 
-var pony = document.createElement('div');
+var Characters = ["Fluttershy", "RainbowDash", "PinkyPie", "Rairity", "TwilightSparkle", "Applejack", "Spike"];
+
+var pony = document.getElementById('pony');
+
+
 var text = document.createElement('div');
 
-function MakePony ()
-{
 
-	document.body.appendChild(pony);
-	pony.style.height="500px";
-	pony.style.width="500px";
-	pony.style.backgroundSize="contain";
-	pony.style.backgroundRepeat="no-repeat";
-	pony.style.backgroundImage = "url(MyLittlePonyBackground.png)";
-	pony.style.position = "center";
-}
 
-MakePony();
-
-document.addEventListener("click", function changeImage (){
-		var random = Math.floor(Math.random()*7)
-		pony.style.backgroundImage = "url(" + Characters[random] + ".png)"
 
 function MakeText ()
 {
@@ -39,17 +46,25 @@ function MakeText ()
 	text.style.height="500px";
 	text.style.width="500px";
 	text.style.position="absolute";
-	text.style.left="500px"
+	text.style.left="500px";
+	text.style.backgroundSize = "contain";
+	text.style.backgroundRepeat = "no-repeat";
+
 }
 
-MakeText();
-document.addEventListener("click", function changeImage (){
+
+function changeImageAndText (){
 		var random = Math.floor(Math.random()*7)
-		text.style.backgroundImage = "url(" + Words[random] + ".png)"
+		pony.style.backgroundImage = "url(" + Characters[random] + ".png)";
 
-//let redirect = [`deciding`, 'deciding.', `deciding..`, `deciding...`]
+		MakeText()
+		text.style.backgroundImage = "url(" + Words[random] + ".png)";
 
-//function redirect()
+
+};
+
+document.addEventListener("click", changeImageAndText)
+
 
 
 </script>
