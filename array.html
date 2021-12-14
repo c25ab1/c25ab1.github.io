@@ -21,9 +21,6 @@
 </head>
 <body>
 
-
-
-
 <div id="pony"></div>
 
 <script type="text/javascript">
@@ -38,10 +35,7 @@ var pony = document.getElementById('pony');
 var text = document.createElement('div');
 
 
-
-
-function MakeText ()
-{
+function MakeText (){
 	document.body.appendChild(text);
 	text.style.height="500px";
 	text.style.width="500px";
@@ -49,9 +43,7 @@ function MakeText ()
 	text.style.left="500px";
 	text.style.backgroundSize = "contain";
 	text.style.backgroundRepeat = "no-repeat";
-
 }
-
 
 function changeImageAndText (){
 		var random = Math.floor(Math.random()*7)
@@ -59,14 +51,9 @@ function changeImageAndText (){
 
 		MakeText()
 		text.style.backgroundImage = "url(" + Words[random] + ".png)";
-
-
 };
 
 document.addEventListener("click", changeImageAndText)
-
-
-
 </script>
 </body>
 </html>
