@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+<style type ="text/css">
+#crystalball{
+	height: 1000px;
+	width:  1520px;
+	background-image: url("crystalball.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 0px;
+}
+
+#button{
+	top: 130px;
+	left: 1200px;
+	position: absolute;
+
+}
+
+#text{
+	top: 200px;
+	left: 560px;
+	z-index: 2px;
+	position:absolute  ;
+	background-color: transparent;
+}
+
+#toptext{
+	top: 150px;
+	left: 135px;
+	position: absolute;
+		font-size: 80px;
+
+}
+
+p{font-family: 'PT Sans Narrow', sans-serif;}
+	p{font-size:33px;
+		}
+	p{color: white;}
+
+	p{margin:55px;}
+
+	p{line-height: 1.5;}
+
+
+	body{margin: 0px;}
+
+	#container{
+		font-size: 150px;
+		top: 275px;
+		left: 120px;
+		position: absolute;
+	}
+
+
+</style>
+
+
+
+
+</body>
+<div id="crystalball">
+		<p><input id="button" type="button" value="Refresh" onClick="refresh(container)">
+
+<div id="text">
+<p> ✨Your 2022 Prediction!✨ </p>
+
+<div id="container">
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+var emojis = ["💸", "😍", "😱", "💔", "💪", "🧠", "👰‍♀️", "🤰","🐶", "🍜", "✈️"];
+
+
+var container= document.getElementById('container');
+
+document.addEventListener("click", function randomEmoji (){
+		var random = Math.floor(Math.random()*10);
+		container.innerText= emojis[random];
+});
+
+</script>
+
+
+
+</html>
