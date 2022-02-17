@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style  type="text/css">
+#background{
+	height: 1000px;
+	width:  2000px;
+	background-color: lightpink;
+}
+
+#heart{
+height: 400px;
+width: 500px;
+background-position: center;
+background-image: url(heart.png);
+background-repeat: no-repeat;	
+position: absolute;
+left: 400px;
+top: 200px;
+}
+
+#teddy{
+background-image: url(teddy.png);
+background-size: contain;
+background-repeat: no-repeat;
+height: 100px;
+width: 100px;
+left: 70px;
+top: 200px;
+position: absolute;
+}
+
+#rose{
+background-image: url(rose.png);
+background-size: contain;
+background-repeat: no-repeat;
+height: 90px;
+width: 90px;
+left: 60px;
+top: 320px;
+position: absolute;
+}
+
+#smallheart{
+background-image: url(smallheart.png);
+background-size: contain;
+background-repeat: no-repeat;
+height: 100px;
+width: 100px;
+left: 55px;
+top: 415px;
+position: absolute;
+}
+
+#flowers{
+background-image: url(flowers.png);
+background-size: contain;
+background-repeat: no-repeat;
+height: 100px;
+width: 100px;
+left: 60px;
+top: 520px;
+position: absolute;
+}
+
+#text1{
+position: absolute;
+left: 350px;
+top: 20px;
+font-family: 'Pacifico', cursive; font-size: 60px;
+}
+
+#text2{
+position: absolute;
+left: 347px;
+top: 20px;
+color: white;
+font-family: 'Pacifico', cursive; font-size: 60px;
+}
+	
+
+#textstickers{
+position: absolute;
+left: 70px;
+top: 130px;
+color: white;
+font-size: 30px;
+
+}
+
+#textpaint{
+	position: absolute;
+	left: 1130px;
+	top: 130px;
+	color: white;
+	font-size: 30px;
+}
+
+#cwhite{
+	position: absolute;
+	height: 80px;
+ 	width: 80px;
+	left: 1125px;
+  top: 215px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  border-width:2px;
+border-style:solid;
+border-color:black;
+}
+
+#clightpink{
+	position: absolute;
+	height: 80px;
+ 	width: 80px;
+	left: 1125px;
+  top: 315px;
+  border-width:2px;
+border-style:solid;
+border-color:black;
+  background-color: lightpink;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#cdarkpink{
+	position: absolute;
+	height: 80px;
+ 	width: 80px;
+	left: 1125px;
+  top: 415px;
+  border-width:2px;
+border-style:solid;
+border-color:black;
+  background-color: rgb(255, 150, 168);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+#cred{
+	position: absolute;
+	height: 80px;
+ 	width: 80px;
+	left: 1125px;
+  top: 515px;
+  border-width:2px;
+border-style:solid;
+border-color:black;
+  background-color: rgb(242, 68, 97);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#totext{
+top: 460px;
+left: 830px;
+position: absolute;
+}
+
+#fromtext{
+top: 520px;
+left: 830px;
+position: absolute;
+
+}
+
+ .sticker {
+     width: 50px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;  }
+
+
+.circle {
+	width: 5px;
+	height: 5px;
+	background-size: contain;
+}
+
+</style>
+</head>
+
+<div id= "text1"> <p> Decorate Your Valentine!</p>
+</div>
+<div id= "text2"> <p> Decorate Your Valentine!</p>
+</div>
+<div id= "textpaint"><p> Paint: </p></div>
+<div id="textstickers"><p> Stickers:</p></div>
+<div id="clightpink"></div>
+<div id="cdarkpink"></div>
+<div id="cred"></div>
+<div id="cwhite"></div>
+<div id="circle"></div>
+<div id="background">
+	<div class="sticker" id="teddy"></div>
+	<div class="sticker" id="smallheart"></div>
+	<div class="sticker" id="flowers"></div>
+	<div class="sticker" id="rose"></div>
+	<div id= "totext"><p> To: </p><input type="text" >
+</div>
+<div id= "fromtext"><p> Love, </p><input type="text" >
+</div>
+<div id = "heart"></div>
+</div>
+
+<script type="text/javascript">
+		var image;
+
+function makeSticker(){
+	var teddy = document.createElement("teddy");
+	teddy.style.width= "50px";
+	teddy.style.height= "50px";
+	teddy.style.position = "absolute";
+	teddy.style.boarderRadius = "50%";
+	teddy.style.backgroundImage = "url(" + image + ")";
+	teddy.style.backgroundSize = "cover";
+	
+	heart.addEventListener("mousemove", function(event){
+		console.log(event)
+	});
+
+	document.body.appendChild(teddy);
+	teddy.style.left = event.clientX - 25 + "px";
+	teddy.style.top = event.clientY - 25 + "px";
+
+};
+
+	teddy.addEventListener("click", function() {
+	 	image = "teddy.png"
+	 });
+
+	 rose.addEventListener("click", function() {
+	 	image = "rose.png"
+	 });
+
+ 	flowers.addEventListener("click", function() {
+	 	image = "flowers.png"
+	 });
+
+	 smallheart.addEventListener("click", function() {
+	 	image = "smallheart.png"
+	 });
+
+heart.addEventListener("click", makeSticker);
+
+
+	var ccolor; 
+	var circle;
+function makeCircle(){
+	var circle = document.createElement("circle");
+		document.body.appendChild(circle);
+
+	circle.style.width= "20px";
+	circle.style.height= "20px";
+	circle.style.position = "absolute";
+	circle.style.boarderRadius = "50%";
+	circle.style.zIndex = "10";
+	circle.style.backgroundColor= ccolor;
+	
+
+	circle.style.left = event.clientX - 25 + "px";
+	circle.style.top = event.clientY - 25 + "px";
+
+};
+
+
+	clightpink.addEventListener("click", function() {
+		heart.addEventListener("mousemove", function(event){
+		console.log(event)
+		makeCircle()
+	 	ccolor = "lightpink";
+	});
+		
+	 		 	
+	 });
+
+	 cdarkpink.addEventListener("click", function() {
+	 	heart.addEventListener("mousemove", function(event){
+		console.log(event)
+	 	makeCircle()
+	 	ccolor = 'rgb(' + 255 + ',' + 150 + ',' + 168 +')';
+	 		 	
+	 })
+
+	 	 });
+
+ 	cred.addEventListener("click", function() {
+ 		heart.addEventListener("mousemove", function(event){
+		console.log(event)
+ 		makeCircle()
+	 	ccolor = 'rgb(' + 242 + ',' + 68 + ',' + 97 +')';
+	 		 	
+	 });
+ 		 })
+
+	 cwhite.addEventListener("click", function() {
+	 	heart.addEventListener("mousemove", function(event){
+		console.log(event)
+	 	makeCircle()
+	 	ccolor = "white";
+	 	
+	 })
+
+	  }) ;
+
+</script>
+
+</body>
+
+</html>
