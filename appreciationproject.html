@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<style>
+.ingredients{
+	height: 200px;
+	width: 200px;
+	background-size: contain;
+}
+
+#beans{
+	background-image: url("coffeebeans.png");
+}
+
+#milk{
+	background-image: url("milk.png");
+}
+
+#sugar{
+	background-image: url("sugarcubes.png");
+}
+
+#emptycup{
+	background-image: url("emptycup.png");
+}
+
+</style>
+
+<body>
+
+<div id ="beans" class="ingredients"></div>
+<div id="milk" class="ingredients"></div>
+<div id="sugar" class="ingredients"></div>
+<div id="emptycup" class="ingredients"></div>
+<div id="coffee" class="ingredients"></div>
+
+</body>
+
+<script type="text/javascript">
+
+var ingredientList = document.getElementsByClassName("ingredients");
+
+ingredientList = Array.from(ingredientList)
+
+document.addEventListener("click", function(){
+	ingredientList.forEach( function(){})
+})
+
+
+
+console.log(ingredientList)
+
+
+
+</script>
+
+</html>

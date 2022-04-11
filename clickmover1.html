@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="utf-8">
+     <title></title>
+ </head>
+ <body>
+
+<style>
+ 
+/* styling class list (dinosaurs) that will be created*/
+
+ .dino{
+            left:1000px;
+            top:800px;
+    background-size:contain;
+            width:100px;
+            height:100px;
+            background-image:url(dino.png);
+            transition:.5s;
+            margin:10px;
+            background-position:center;
+            background-repeat: no-repeat;
+            position:absolute;
+        }
+
+ #text{
+    font-size: 40px;
+ }
+
+
+</style>
+<div id="text">Click to change the Dinos!</div>
+<script type="text/javascript">
+
+
+    //var input = document.getElementById('input');
+       // var x = 0;
+    
+    var delayInMilliseconds = 3000; //make variable for time delay after dino changes
+
+    var audio = new Audio("mixkit-retro-game-notification-212.wav");
+
+//function to create the dinos
+    function createCorona() {
+        var corona = document.createElement('div');
+        document.body.appendChild(corona);
+        corona.classList.add("dino");
+//assigning random position
+        function changePosition() {
+            corona.style.left = 1000 * Math.random() + "px";
+            corona.style.top = 1000 * Math.random() + "px";
+
+
+        };
+
+//function for when the class is clicked, the background image changes and then later disappears after a wait
+        corona.addEventListener("click", function() {
+            console.log("hi");
+            corona.style.backgroundImage = "url('dino1.png')";
+            
+            setTimeout(function() {corona.classList.remove("dino");}, delayInMilliseconds);
+            audio.play()
+
+
+
+        })
+//timing the change position so it happens every 2 seconds
+        setInterval(changePosition, 2000)
+    };
+
+//timing the create dino so it happens every 2 seconds
+    setInterval(createCorona, 1000);
+ </script>
+ </body>
+ </html>
+
+ 

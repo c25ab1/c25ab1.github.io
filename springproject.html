@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+
+#background{
+	width: 1400px;
+	height: 800px;
+	background-color: black;
+}
+
+#season{
+	width: 300px;
+	height: 300px;
+	background-image: url(374cc435d9de95203f83ec0a977cc9b7.gif);
+	background-size: cover;
+	position: absolute;
+	left: 100px;
+	top: 90px;
+	border-radius: 50%;
+}
+
+#season1{
+	width: 300px;
+	height:  300px;
+	
+}
+
+#text{
+	font-family: 'Pacifico', cursive; font-size: 35px;
+	left: 550px;
+	top: 20px;
+	position: absolute;
+	z-index: 2px;
+	color: white;
+}
+
+#text2{
+	font-family: 'Pacifico', cursive; font-size: 35px;
+	left: 547px;
+	top: 20px;
+	position: absolute;
+	z-index: 2px;
+	color: grey;
+}
+
+
+</style>
+
+<div id="background">
+<div id="season"></div>
+<div id="text2"> Click to see spring!</div>
+<div id="text"> Click to see spring!</div>
+</div>
+<script type="text/javascript">
+
+var click = document.getElementById('season');
+var audio = new Audio("IslandInThe Sun.mp3");
+var text = document.getElementById('text');
+var text2 = document.getElementById('text2');
+
+function ChangeSeason(){
+
+season.style.backgroundImage = "url(flowers.jpg)"; 
+text.style.setColor = rgb(227, 64, 170);
+text2.style.setColor = rgb(255, 204, 233);
+}
+
+click.onclick = function(){
+	if (audio.paused) {
+		audio.play();
+		click.style.backgroundImage = "url(flowers-garden.gif)"; 
+	}
+	else {
+		audio.pause();
+		click.style.backgroundImage = "url(374cc435d9de95203f83ec0a977cc9b7.gif)"
+	}
+}
+
+
+</script>
+
+</body>
+
+</html>
